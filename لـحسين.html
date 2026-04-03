@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-      <span data-gender="">هدية إلى حسين</span>
+      <span data-gender="">هدية الى حسين</span>
       <span data-gender="🇯🇴👧 🇯🇴👦">هدية إلى حسين</span>
-      <span data-gender="🇺🇸👧 🇺🇸👦">Gift for حسين</span>
+      <span data-gender="🇺🇸👧 🇺🇸👦">Gift for Hussein</span>
     </title>
     <style>
       @import url(https://fonts.googleapis.com/css2?family=Lemonada:wght@300..700&family=Martian+Mono:wght@100..800&display=swap);
@@ -19,9 +19,9 @@
         overflow: hidden;
       }
 
-      /* تم تغيير الثيم من الأزرق إلى البرتقالي، الأصفر، والأخضر المدموج والمموج */
+      /* تغيير الثيم هنا للبرتقالي، الأصفر، والأخضر المتموج */
       body {
-        background: linear-gradient(135deg, #d35400 0%, #f39c12 25%, #27ae60 50%, #e67e22 75%, #1e5128 100%);
+        background: linear-gradient(135deg, #f39c12 0%, #d35400 25%, #1e5128 50%, #e67e22 75%, #27ae60 100%);
         background-size: 400% 400%;
         animation: gradientBG 15s ease infinite;
       }
@@ -43,7 +43,9 @@
         margin: -10em auto 0 auto;
       }
 
-      /* ============================================== Candle */
+      /* ============================================== Candle
+      */
+
       .cake {
         background: #ffffff;
         border-radius: 10px;
@@ -66,10 +68,18 @@
         width: 100%;
         height: 2.22222222px;
       }
-      .cake:after { top: 25%; left: 0; }
-      .cake:before { top: 45%; left: 0; }
+      .cake:after {
+        top: 25%;
+        left: 0;
+      }
+      .cake:before {
+        top: 45%;
+        left: 0;
+      }
 
-      /* ============================================== Fire */
+      /* ============================================== Fire
+      */
+
       .fuego {
         border-radius: 100%;
         position: absolute;
@@ -79,11 +89,24 @@
         width: 6.66666667px;
         height: 18px;
       }
-      .fuego:nth-child(1) { animation: fuego 2s 6.5s infinite; }
-      .fuego:nth-child(2) { animation: fuego 1.5s 6.5s infinite; }
-      .fuego:nth-child(3) { animation: fuego 1s 6.5s infinite; }
-      .fuego:nth-child(4) { animation: fuego 0.5s 6.5s infinite; }
-      .fuego:nth-child(5) { animation: fuego 0.2s 6.5s infinite; }
+      .fuego:nth-child(1) {
+        animation: fuego 2s 6.5s infinite;
+      }
+      .fuego:nth-child(2) {
+        animation: fuego 1.5s 6.5s infinite;
+      }
+      .fuego:nth-child(3) {
+        animation: fuego 1s 6.5s infinite;
+      }
+      .fuego:nth-child(4) {
+        animation: fuego 0.5s 6.5s infinite;
+      }
+      .fuego:nth-child(5) {
+        animation: fuego 0.2s 6.5s infinite;
+      }
+
+      /* ============================================== Animation Fire
+      */
 
       @keyframes fuego {
         0%, 100% {
@@ -98,23 +121,27 @@
         }
       }
 
-      @keyframes in { to { transform: translateY(0); } }
+      @keyframes in {
+        to {
+          transform: translateY(0);
+        }
+      }
 
-      /* تم تصغير الحقل ليكون مرتباً كما طلبت */
+      /* تعديل حقل الكلام - تصغير العرض وتغيير ألوان التوهج لتناسب الثيم */
       .text {
         color: #ffffff;
         font-family: 'Lemonada', sans-serif;
         font-weight: 600;
         font-style: italic;
         text-align: center;
-        background: rgba(0, 0, 0, 0.2); /* خلفية داكنة خفيفة لتناسب الثيم الجديد */
+        background: rgba(0, 0, 0, 0.15); /* لون داكن قليلاً لإبراز النص */
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-        border: 2px solid rgba(255, 204, 0, 0.6); /* حدود ذهبية لامعة */
+        border: 2px solid rgba(255, 204, 0, 0.6); /* حدود ذهبية */
         border-radius: 16px;
-        padding: 15px 25px;
+        padding: 15px 20px;
         margin: 20px auto;
-        max-width: 70%; /* صغرنا الحقل ليكون مرتب */
+        max-width: 75%; /* تم تصغير الحقل */
         box-shadow: 
           0 8px 32px rgba(0, 0, 0, 0.3),
           0 0 20px rgba(255, 165, 0, 0.4),
@@ -123,23 +150,23 @@
       }
 
       @keyframes glowPulse {
-        0%, 100% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 140, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1); }
-        50% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(39, 174, 96, 0.7), inset 0 0 30px rgba(255, 255, 255, 0.2); }
+        0%, 100% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1); }
+        50% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(39, 174, 96, 0.8), inset 0 0 30px rgba(255, 255, 255, 0.2); }
       }
 
       .text h1 {
         font-size: 0.85em;
         margin: 0;
         line-height: 1.6;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
 
       @keyframes floatIn {
-        0% { transform: scale(0.95); opacity: 0; }
-        100% { transform: scale(1); opacity: 1; }
-      }
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
     </style>
-  </head>
+</head>
   <body>
     
       <div class="cake">
@@ -299,11 +326,9 @@
       </svg>
       <div class="text">
       <h1>
-        <span data-gender="??">كل عام وانت بخير يا صديقي العزيز <span class="name">حسين</span>! ربي يسعدك ويوفقك ويحقق لك كل ما تتمناه. إلى أغلى صديق، أتمنى لك سنة جميلة وسعيدة</span>
-        <br>
+        <span data-gender="??"> كل عام وانت بخير حبيبيpan class="name">حسوني</span>! ربي يسعدك ويوفقك ويحقق لك كل ما تتمناه. إلى أغلى صديق, أتمنى إلك سنة جميلة وسعيدة</span>
         <span data-gender="??">Happy Birthday my dear friend <span class="name">Hussein</span>! May God bless you with happiness, success, and grant you all your wishes. To my dearest friend, I wish you a beautiful and happy year</span>
       </h1>
       </div>
 </body>
 </html>
-
