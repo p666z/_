@@ -17,11 +17,12 @@
         height: 100%;
         scrollbar-width: none;
         overflow: hidden;
+        margin: 0;
       }
 
-      /* الثيم المطلوب: أصفر، برتقالي غامق ولامع، مع تدرج أخضر مدموج ومموج */
+      /* الثيم المطلوب: أصفر، برتقالي غامق، وأخضر متدرج ومموج (بدلاً من الأزرق) */
       body {
-        background: linear-gradient(135deg, #ff8c00 0%, #ffcc00 25%, #2d5a27 50%, #e67e22 75%, #1e5128 100%);
+        background: linear-gradient(135deg, #ffcc00 0%, #ff8c00 25%, #27ae60 50%, #e67e22 75%, #1e5128 100%);
         background-size: 400% 400%;
         animation: gradientBG 12s ease infinite;
       }
@@ -32,11 +33,9 @@
         100% { background-position: 0% 50%; }
       }
 
-      .name{
+      .name {
         font-size: 1.1rem;
         font-weight: 600;
-        color: #fff;
-        text-shadow: 0 0 8px #ffcc00;
       }
 
       #cake {
@@ -62,7 +61,7 @@
       }
       .cake:after,
       .cake:before {
-        background: rgba(255, 140, 0, 0.6);
+        background: rgba(255, 0, 0, 0.4);
         content: "";
         position: absolute;
         width: 100%;
@@ -89,50 +88,50 @@
 
       @keyframes fuego {
         0%, 100% {
-          background: rgba(254, 248, 97, 0.8);
-          box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.5);
+          background: rgba(254, 248, 97, 0.5);
+          box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
           transform: translateY(0) scale(1);
         }
         50% {
-          background: rgba(255, 50, 0, 0.3);
-          box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.3);
+          background: rgba(255, 50, 0, 0.1);
+          box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
           transform: translateY(-20px) scale(0);
         }
       }
 
       @keyframes in { to { transform: translateY(0); } }
 
-      /* تم تصغير حقل الكلام قليلاً لترتيبه كما طلبت */
+      /* تصغير حقل الكلام وترتيبه */
       .text {
         color: #ffffff;
         font-family: 'Lemonada', sans-serif;
         font-weight: 600;
         font-style: italic;
         text-align: center;
-        background: rgba(0, 0, 0, 0.2); 
+        background: rgba(255, 255, 255, 0.12);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-        border: 2px solid rgba(255, 204, 0, 0.5);
+        border: 2px solid rgba(255, 204, 0, 0.5); /* إطار ذهبي لامع */
         border-radius: 16px;
-        padding: 15px 25px; /* تقليل البادينج */
+        padding: 15px 20px; /* بادينج أصغر */
         margin: 15px auto;
-        max-width: 75%; /* تصغير العرض من 85% إلى 75% */
+        max-width: 70%; /* عرض أصغر لترتيب الكلام */
         box-shadow: 
           0 8px 32px rgba(0, 0, 0, 0.3),
-          0 0 20px rgba(255, 140, 0, 0.3);
+          0 0 20px rgba(255, 204, 0, 0.3);
         animation: glowPulse 2s ease-in-out infinite;
       }
 
       @keyframes glowPulse {
-        0%, 100% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 140, 0, 0.4); }
+        0%, 100% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 204, 0, 0.4); }
         50% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(39, 174, 96, 0.6); }
       }
 
       .text h1 {
         font-size: 0.8em;
         margin: 0;
-        line-height: 1.6;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        line-height: 1.5;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
     </style>
 </head>
@@ -146,7 +145,7 @@
         <div class="fuego"></div>
       </div>
       <svg id="cake" version="1.1" x="0px" y="0px" width="200px" height="500px" viewBox="0 0 200 500" enable-background="new 0 0 200 500" xml:space="preserve">
-        <path fill="#e67e22" d="M173.667-13.94c-49.298,0-102.782,0-147.334,0c-3.999,0-4-16.002,0-16.002
+        <path fill="#a88679" d="M173.667-13.94c-49.298,0-102.782,0-147.334,0c-3.999,0-4-16.002,0-16.002
         c44.697,0,96.586,0,147.334,0C177.667-29.942,177.668-13.94,173.667-13.94z">
             <animate id="bizcocho_3" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1" begin="relleno_2.end" dur="0.3s" fill="freeze" values="
                               M173.667-13.94c-49.298,0-102.782,0-147.334,0c-3.999,0-4-16.002,0-16.002
@@ -160,7 +159,7 @@
         c46.385,0,97.539,0,147.334,0C177.668,411.567,177.667,427.569,173.667,427.569z
                               " />
         </path>
-        <path fill="#27ae60" d="M100-178.521c1.858,0,3.364,1.506,3.364,3.363c0,0,0,33.17,0,44.227
+        <path fill="#8b6a60" d="M100-178.521c1.858,0,3.364,1.506,3.364,3.363c0,0,0,33.17,0,44.227
         c0,19.144,0,57.431,0,76.574c0,10.152,0,40.607,0,40.607c0,1.858-1.506,3.364-3.364,3.364l0,0c-1.858,0-3.364-1.506-3.364-3.364c0,0,0-30.455,0-40.607c0-19.144,0-57.432,0-76.575c0-11.057,0-44.226,0-44.226C96.636-177.015,98.142-178.521,100-178.521
         L100-178.521z">
             <animate id="relleno_2" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 0.58 1" begin="bizcocho_2.end" dur="0.5s" fill="freeze" values="
@@ -183,7 +182,7 @@
         c0,0-4.125-4.983,0-7.823c5.201-3.58,16.085,0,23.725,0c8.841,0,20.762,0,20.762,0c3.686,0,8.597,0,19.511,0H102.242z
                               " />
         </path>
-        <path fill="#f39c12" d="M173.667-15.929c-46.512,0-105.486,0-147.334,0c-3.999,0-4-16.002,0-16.002
+        <path fill="#a88679" d="M173.667-15.929c-46.512,0-105.486,0-147.334,0c-3.999,0-4-16.002,0-16.002
         c43.566,0,97.96,0,147.334,0C177.667-31.931,177.666-15.929,173.667-15.929z">
             <animate id="bizcocho_2" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0.25 0 0.58 1" begin="relleno_1.end" dur="0.5s" fill="freeze" values="
                               M173.667-15.929c-46.512,0-105.486,0-147.334,0c-3.999,0-4-16.002,0-16.002
@@ -199,7 +198,7 @@
         c44.697,0,96.586,0,147.334,0C177.667,435.392,177.668,451.394,173.667,451.394z
                               " />
         </path>
-        <path fill="#21610b" d="M101.368-73.685c0,12.164,0,15.18,0,28.519c0,22.702,0-13.661,0,8.304c0,14.48,0,18.233,0,30.512
+        <path fill="#8b6a60" d="M101.368-73.685c0,12.164,0,15.18,0,28.519c0,22.702,0-13.661,0,8.304c0,14.48,0,18.233,0,30.512
         c0,1.753-2.958,1.847-2.958,0c0-12.68,0-16.277,0-30.401c0-21.983,0,11.66,0-8.305c0-13.027,0-15.992,0-28.628
         C98.411-75.883,101.368-75.592,101.368-73.685z">
             <animate id="relleno_1" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 0.6 1" begin="bizcocho_1.end" dur="0.5s" fill="freeze" values="
@@ -220,7 +219,7 @@
         c-4.109,0.65-3.01-10.006,0-10.006C37.129,451.394,149.379,451.394,173.667,451.394z
                               " />
         </path>
-        <path fill="#f39c12" d="M173.667,21.571c-33.174,0-111.467,0-147.334,0c-4,0-4-16.002,0-16.002c39.836,0,105.982,0,147.334,0
+        <path fill="#a88679" d="M173.667,21.571c-33.174,0-111.467,0-147.334,0c-4,0-4-16.002,0-16.002c39.836,0,105.982,0,147.334,0
         C177.668,5.569,177.667,21.571,173.667,21.571z">
             <animate id="bizcocho_1" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 1 1; 0.25 0 1 1; 0 0 1 1; 0.25 0 0.6 1" begin="2s" dur="0.8s" fill="freeze" values="
                               M173.667,21.571c-33.174,0-111.467,0-147.334,0c-4,0-4-16.002,0-16.002c39.836,0,105.982,0,147.334,0
@@ -267,14 +266,15 @@
       c-3.131,7.745-15.825-4.369-23.8,2.903C126.261,418.271,118.301,411.567,111.873,411.567z
                               " />
         </path>
-        <rect x="10" y="475.571" fill="#ffcc00" width="180" height="4" />
+        <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
       </svg>
       <div class="text">
       <h1>
-        <span data-gender="??">كل عام وانت بخير يا صديقي العزيز <span class="name">حسين</span>! ربي يسعدك ويوفقك ويحقق لك كل ما تتمناه. إلى أغلى صديق, أتمنى إلك سنة جميلة وسعيدة</span>
-        <br>
+        <span data-gender="??">كل عام وانت بخير يا صديقي العزيز <span class="name">حسين</span>! ربي يسعدك ويوفقك ويحقق لك كل ما تتمناه. إلى أغلى صديق، أتمنى لك سنة جميلة وسعيدة</span>
+        <br><br>
         <span data-gender="??">Happy Birthday my dear friend <span class="name">Hussein</span>! May God bless you with happiness, success, and grant you all your wishes.</span>
       </h1>
       </div>
 </body>
 </html>
+
