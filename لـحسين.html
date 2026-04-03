@@ -17,14 +17,13 @@
         height: 100%;
         scrollbar-width: none;
         overflow: hidden;
-        margin: 0;
       }
 
-      /* الثيم المطلوب: أصفر، برتقالي غامق، وأخضر متدرج ومموج (بدلاً من الأزرق) */
+      /* تعديل الثيم إلى أصفر، برتقالي، وأخضر مدموج ومموج */
       body {
-        background: linear-gradient(135deg, #ffcc00 0%, #ff8c00 25%, #27ae60 50%, #e67e22 75%, #1e5128 100%);
+        background: linear-gradient(135deg, #f39c12 0%, #d35400 25%, #27ae60 50%, #e67e22 75%, #1e5128 100%);
         background-size: 400% 400%;
-        animation: gradientBG 12s ease infinite;
+        animation: gradientBG 15s ease infinite;
       }
 
       @keyframes gradientBG {
@@ -33,7 +32,7 @@
         100% { background-position: 0% 50%; }
       }
 
-      .name {
+      .name{
         font-size: 1.1rem;
         font-weight: 600;
       }
@@ -67,8 +66,14 @@
         width: 100%;
         height: 2.22222222px;
       }
-      .cake:after { top: 25%; left: 0; }
-      .cake:before { top: 45%; left: 0; }
+      .cake:after {
+        top: 25%;
+        left: 0;
+      }
+      .cake:before {
+        top: 45%;
+        left: 0;
+      }
 
       /* ============================================== Fire */
       .fuego {
@@ -101,36 +106,37 @@
 
       @keyframes in { to { transform: translateY(0); } }
 
-      /* تصغير حقل الكلام وترتيبه */
+      /* تصغير الحقل ليكون مرتباً كما طلبت مع الحفاظ على شفافية وجمالية الثيم */
       .text {
         color: #ffffff;
         font-family: 'Lemonada', sans-serif;
         font-weight: 600;
         font-style: italic;
         text-align: center;
-        background: rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-        border: 2px solid rgba(255, 204, 0, 0.5); /* إطار ذهبي لامع */
+        border: 2px solid rgba(255, 204, 0, 0.6); /* إطار ذهبي بدل الأزرق */
         border-radius: 16px;
-        padding: 15px 20px; /* بادينج أصغر */
-        margin: 15px auto;
-        max-width: 70%; /* عرض أصغر لترتيب الكلام */
+        padding: 15px 20px;
+        margin: 20px auto;
+        max-width: 75%; /* صغرنا العرض من 85% لـ 75% */
         box-shadow: 
           0 8px 32px rgba(0, 0, 0, 0.3),
-          0 0 20px rgba(255, 204, 0, 0.3);
+          0 0 20px rgba(255, 165, 0, 0.4),
+          inset 0 0 20px rgba(255, 255, 255, 0.1);
         animation: glowPulse 2s ease-in-out infinite;
       }
 
       @keyframes glowPulse {
-        0%, 100% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 204, 0, 0.4); }
-        50% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(39, 174, 96, 0.6); }
+        0%, 100% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1); }
+        50% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(39, 174, 96, 0.8), inset 0 0 30px rgba(255, 255, 255, 0.2); }
       }
 
       .text h1 {
-        font-size: 0.8em;
+        font-size: 0.85em;
         margin: 0;
-        line-height: 1.5;
+        line-height: 1.6;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
     </style>
@@ -270,9 +276,9 @@
       </svg>
       <div class="text">
       <h1>
-        <span data-gender="??">كل عام وانت بخير يا صديقي العزيز <span class="name">حسين</span>! ربي يسعدك ويوفقك ويحقق لك كل ما تتمناه. إلى أغلى صديق، أتمنى لك سنة جميلة وسعيدة</span>
-        <br><br>
-        <span data-gender="??">Happy Birthday my dear friend <span class="name">Hussein</span>! May God bless you with happiness, success, and grant you all your wishes.</span>
+        <span data-gender="??">كل عام وانت بخير يا صديقي العزيز <span class="name">حسين</span>! ربي يسعدك ويوفقك ويحقق لك كل ما تتمناه. إلى أغلى صديق، أتمنى لك سنة جميلة وسعيدة تليق بقلبك.</span>
+        <br>
+        <span data-gender="??">Happy Birthday my dear friend <span class="name">Hussein</span>! May God bless you with happiness, success, and grant you all your wishes. To my dearest friend, I wish you a beautiful and happy year.</span>
       </h1>
       </div>
 </body>
